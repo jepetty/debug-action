@@ -4223,6 +4223,12 @@ if (_actions_github__WEBPACK_IMPORTED_MODULE_0__.context.eventName === 'pull_req
     for (const prop in _actions_github__WEBPACK_IMPORTED_MODULE_0__.context.payload.pull_request) {
         console.log(`pullrequest.${prop}: ${_actions_github__WEBPACK_IMPORTED_MODULE_0__.context.payload.pull_request[prop]}`)
     }
+    for (const prop in _actions_github__WEBPACK_IMPORTED_MODULE_0__.context.payload.pull_request.base) {
+        console.log(`pullrequest.base.${prop}: ${_actions_github__WEBPACK_IMPORTED_MODULE_0__.context.payload.pull_request.base[prop]}`)
+    }
+    for (const prop in _actions_github__WEBPACK_IMPORTED_MODULE_0__.context.payload.pull_request.head) {
+        console.log(`pullrequest.base.head${prop}: ${_actions_github__WEBPACK_IMPORTED_MODULE_0__.context.payload.pull_request.head[prop]}`)
+    }
 }
 
 console.log('\n-------- Process.ENV properties --------')
