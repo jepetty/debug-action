@@ -19,7 +19,7 @@ if (github.context.eventName === 'pull_request') {
         console.log(`pullrequest.base.${prop}: ${github.context.payload.pull_request.base[prop]}`)
     }
     for (const prop in github.context.payload.pull_request.head) {
-        console.log(`pullrequest.base.head${prop}: ${github.context.payload.pull_request.head[prop]}`)
+        console.log(`pullrequest.head.${prop}: ${github.context.payload.pull_request.head[prop]}`)
     }
 }
 
