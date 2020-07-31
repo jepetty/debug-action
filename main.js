@@ -1,4 +1,5 @@
 import * as github from '@actions/github';
+import * as cp from 'child_process';
 
 Object.defineProperty(github.context, 'github', {enumerable: true});
 Object.defineProperty(process.env, 'env', { enumerable: true});
@@ -27,3 +28,8 @@ console.log('\n-------- Process.ENV properties --------')
 for (const prop in process.env) {
     console.log(`${prop}: ${process.env[prop]}`);
 }
+
+const nodeThing = cp.spawn('node -v');
+nodeThing.on('message', (message) => {
+    console.log(message);
+})
